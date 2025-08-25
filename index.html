@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>新幹線スロット777</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+      }
+      /* Custom animation for title */
+      @keyframes bounce-in {
+        0% { transform: scale(0.8); opacity: 0; }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); opacity: 1; }
+      }
+      .animate-bounce-in {
+        animation: bounce-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      }
+       /* Custom rainbow text animation for 777 */
+      @keyframes rainbow-text {
+        0% { color: #ff8a80; } /* red */
+        15% { color: #ffb480; } /* orange */
+        30% { color: #ffd780; } /* yellow */
+        45% { color: #b9f6ca; } /* green */
+        60% { color: #80d8ff; } /* blue */
+        75% { color: #8c9eff; } /* indigo */
+        90% { color: #b388ff; } /* violet */
+        100% { color: #ff8a80; } /* red */
+      }
+      .animate-rainbow-text {
+        animation: rainbow-text 4s linear infinite;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+          "react/": "https://esm.sh/react@^19.1.1/",
+          "react": "https://esm.sh/react@^19.1.1"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
