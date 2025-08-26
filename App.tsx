@@ -59,7 +59,7 @@ const evaluateWin = (reels: SymbolId[]): WinResult | null => {
 
   // 2. Nationwide Mode / Standard Doctor Yellow Appearance
   if (doctorYellowCount > 0) {
-    if (Math.random() < 0.25) {
+    if (Math.random() < 0.15) { // Chance reduced from 0.25
        return {
         type: 'NATIONWIDE_MODE',
         points: 1500,
@@ -126,15 +126,15 @@ const evaluateWin = (reels: SymbolId[]): WinResult | null => {
     };
   }
 
-  // 7. Small Win
-  let hasTwoOfAKind = false;
-  for (const count of counts.values()) {
-    if (count === 2) {
-      hasTwoOfAKind = true;
+  // 7. Small Win - Now only for Shinkansen pairs
+  let hasTwoOfAKindShinkansen = false;
+  for (const [symbol, count] of counts.entries()) {
+    if (count === 2 && shinkansenTypes.includes(symbol)) {
+      hasTwoOfAKindShinkansen = true;
       break;
     }
   }
-  if (hasTwoOfAKind) {
+  if (hasTwoOfAKindShinkansen) {
     return {
       type: 'SMALL_WIN',
       points: 50,
